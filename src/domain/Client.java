@@ -13,14 +13,14 @@ public class Client {
     private Card cardNUmber;
 
 
-    public Client(){}
+    public Client() {
+    }
 
-    public Client(int idNumber, String firstName, String lastName, int age){
+    public Client(int idNum, String fName, String lName) {
 
-        this.idNumber = idNumber;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
+        this.idNumber = idNum;
+        this.firstName = fName;
+        this.lastName = lName;
     }
 
     // Setters

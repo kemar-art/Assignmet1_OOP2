@@ -15,7 +15,7 @@ public class Card {
 
     }
 
-    public Card(int cardNUmber, double balance, int pin, boolean status)
+    public Card(int cNUmber, double bal, int pinCode, boolean stat)
     {
         this.cardNUmber = 45678;
         this.balance = bal;
@@ -28,8 +28,10 @@ public class Card {
 
     }
 
-    public void setBalance(double balance) {
-        this.balance = balance;
+    public void setBalance(double bal) {
+        System.out.println("Enter balance:");
+        bal = Obj1.nextInt();
+        this.balance = bal;
     }
 
     public void setPin(int pinCode) {
@@ -57,6 +59,9 @@ public class Card {
     }
 
     public boolean isStatus() {
+       /* if(!status){
+            System.out.println("Invalid Card");
+        }*/
         return status;
     }
 
