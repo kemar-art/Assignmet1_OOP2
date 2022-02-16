@@ -13,8 +13,8 @@ public class Main {
         Obj1.setFirstName();
         Obj1.setLastName();
         Obj1.setAge();
-        Obj1.setIdNumber();
-        //Obj1.setCard();
+        Obj1.setIdNumber();*/
+      //  Obj1.setCard();
 
 
 
@@ -22,7 +22,7 @@ public class Main {
         System.out.println("Last Name: "+Obj1.getLastName());
         System.out.println("Age: "+Obj1.getAge());
         System.out.println("ID#: "+Obj1.getIdNumber());
-        //KSystem.out.println("Card#: "+Obj1.card);
+        System.out.println("Card#: "+Obj1.getCardNUmber());*/
 
 
 

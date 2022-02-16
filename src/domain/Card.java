@@ -1,6 +1,5 @@
 package domain;
-
-
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Card {
@@ -18,31 +17,35 @@ public class Card {
 
     public Card(int cardNUmber, double balance, int pin, boolean status)
     {
-        this.cardNUmber = cardNUmber;
-        this.balance = balance;
-        this.pin = pin;
-        this.status = status;
+        this.cardNUmber = 45678;
+        this.balance = bal;
+        this.pin = pinCode;
+        this.status = stat;
     }
-    //Setters and Getters
-    public void setCardNUmber(int cardNUmber) {
-        this.cardNUmber = cardNUmber;
+    //Setters
+    public void setCardNUmber(int cNum) {
+      this.cardNUmber = cNum;
+
     }
 
     public void setBalance(double balance) {
         this.balance = balance;
     }
 
-    public void setPin(int pin) {
-        this.pin = pin;
+    public void setPin(int pinCode) {
+
+        System.out.println("Create Pin:");
+        pinCode = Obj1.nextInt();
+        this.pin = pinCode;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setStatus(boolean stat) {
+        this.status = stat;
     }
     // Getters
 
     public int getCardNUmber() {
-        return cardNUmber;
+               return cardNUmber ;
     }
 
     public double getBalance() {
@@ -58,11 +61,21 @@ public class Card {
     }
 
     public void display(){
-        //setBalance();
+        System.out.println(getBalance() + " "+ getCardNUmber()+" " + getPin());
+        System.out.println(isStatus());
+
 
     }
 
-    /* @Override
+
+
+
+
+
+
+
+
+    /*@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Card)) return false;

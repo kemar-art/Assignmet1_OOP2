@@ -10,6 +10,7 @@ public class Client {
     Card card;
 
     Scanner Obj1 = new Scanner(System.in);
+    private Card cardNUmber;
 
 
     public Client(){}
@@ -45,9 +46,14 @@ public class Client {
         this.idNumber = Integer.parseInt(Obj1.nextLine());
     }
 
-    public void setCard() {
+    public void setCard(Card card) {
         this.card = card;
+        card.setCardNUmber(45678);
+        card.setPin(1234);
+        card.setBalance(10000);
+        card.setStatus(false);
     }
+
 
     // Getters
 
@@ -63,18 +69,15 @@ public class Client {
         return age;
     }
 
-     public int getIdNumber() {
+    public int getIdNumber() {
         return idNumber;
     }
 
+    public void display() {
+
+        card.display();
 
 
-
-    public Card getCard() {
-        return card;
     }
 
-    public void display(){
-
-    }
 }
