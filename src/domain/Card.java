@@ -1,5 +1,4 @@
 package domain;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Card {
@@ -22,21 +21,21 @@ public class Card {
         this.pin = pinCode;
         this.status = stat;
     }
+
     //Setters
     public void setCardNUmber(int cNum) {
       this.cardNUmber = cNum;
-
     }
 
     public void setBalance(double bal) {
-        System.out.println("Enter balance:");
+        System.out.print("Enter balance: ");
         bal = Obj1.nextInt();
         this.balance = bal;
     }
 
     public void setPin(int pinCode) {
 
-        System.out.println("Create Pin:");
+        System.out.print("Enter Pin: ");
         pinCode = Obj1.nextInt();
         this.pin = pinCode;
     }
@@ -44,41 +43,45 @@ public class Card {
     public void setStatus(boolean stat) {
         this.status = stat;
     }
-    // Getters
 
+    // Getters
     public int getCardNUmber() {
-               return cardNUmber ;
+        System.out.println("Card #: "+ cardNUmber);
+        return cardNUmber ;
     }
 
     public double getBalance() {
+        System.out.println("Balance: "+ balance);
         return balance;
     }
 
     public int getPin() {
+        System.out.println("");
         return pin;
     }
 
     public boolean isStatus() {
-       /* if(!status){
-            System.out.println("Invalid Card");
-        }*/
+        if(status == true && cardNUmber == 45678){
+            System.out.print("Active: ");
+        }
+        else
+        {
+            System.out.println("Card Status: Deactivated");
+        }
         return status;
     }
 
     public void display(){
-        System.out.println(getBalance() + " "+ getCardNUmber()+" " + getPin());
-        System.out.println(isStatus());
 
+        System.out.println(isStatus());
 
     }
 
+    public void setCardNUmber() {
+    }
 
-
-
-
-
-
-
+    public void setStatus() {
+    }
 
     /*@Override
     public boolean equals(Object o) {
